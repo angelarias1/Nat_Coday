@@ -1,0 +1,112 @@
+.testimonials-info {
+  width: 100%;
+  background-color: #d8d4cf;
+  padding: 38px 0 90px;
+  overflow: hidden;
+}
+
+.testimonials-info__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.testimonials-info__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 88px;
+  align-items: start;
+}
+
+.testimonials-info__card {
+  width: 100%;
+}
+
+.testimonials-info__text {
+  margin: 0 0 22px;
+  max-width: 285px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.91rem;
+  line-height: 1.58;
+  font-weight: 400;
+  color: #6a6461;
+}
+
+.testimonials-info__stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  color: #6a6461;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.testimonials-info__author {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.05;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #6a6461;
+  text-align: right;
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  .testimonials-info {
+    padding: 28px 0 58px;
+  }
+
+  .testimonials-info__container {
+    padding: 0 14px;
+  }
+
+  .testimonials-info__grid {
+    grid-template-columns: 1fr;
+    row-gap: 34px;
+  }
+
+  .testimonials-info__text {
+    max-width: 100%;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+  }
+
+  .testimonials-info__stars {
+    margin-bottom: 18px;
+  }
+
+  .testimonials-info__author {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .testimonials-info {
+    padding: 30px 0 70px;
+  }
+
+  .testimonials-info__container {
+    padding: 0 20px;
+  }
+
+  .testimonials-info__grid {
+    grid-template-columns: 1fr;
+    row-gap: 38px;
+  }
+
+  .testimonials-info__text {
+    max-width: 520px;
+  }
+
+  .testimonials-info__author {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+}

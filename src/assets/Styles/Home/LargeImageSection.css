@@ -1,0 +1,35 @@
+.large-image-section {
+  width: 100%;
+  background-color: #d8d4cf;
+  overflow: hidden;
+}
+
+.large-image-section__container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.large-image-section__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  .large-image-section__image {
+    height: 420px;
+    object-position: center center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .large-image-section__image {
+    height: 580px;
+    object-position: center center;
+  }
+}
