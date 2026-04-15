@@ -1,17 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../Styles/Home/Navbar.css';
+import '../Styles/Navbar.css';
 
-import logoImage from '../../../public/img/1/logo-git add .
-git commit -m "Primer commit"
-git branch -M main
-git remote add origin https://github.com/angelarias1/Nat_Coday.git
-git push -u origin main.png';
 import menuIcon from '../../../public/img/1/menu.png';
 import closeIcon from '../../../public/img/1/close.png';
-import instagramIcon from '../../../public/img/1/ig.png';
-import facebookIcon from '../../../public/img/1/face.png';
-import linkedinIcon from '../../../public/img/1/in.png';
+import overlayLogo from '../../../public/img/logotipo.png';
+import instagramIcon from '../../../public/img/Ig.png';
+import facebookIcon from '../../../public/img/Fc.png';
+import linkedinIcon from '../../../public/img/IN.png';
 import ornamentImage from '../../../public/img/1/1.12.png';
 
 function Navbar() {
@@ -30,14 +26,8 @@ function Navbar() {
       <header className="navbar">
         <div className="navbar__container">
           <Link to="/" className="navbar__brand" onClick={handleCloseMenu}>
-            <img
-              src={logoImage}
-              alt="Nat Coday"
-              className="navbar__logo"
-            />
+            NAT CODAY
           </Link>
-
-          <p className="navbar__tagline">TURN MOMENTS INTO MEMORIES.</p>
 
           <button
             type="button"
@@ -61,7 +51,7 @@ function Navbar() {
           <div className="navbar-overlay__top">
             <div className="navbar-overlay__logo-wrapper">
               <img
-                src={logoImage}
+                src={overlayLogo}
                 alt="Nat Coday"
                 className="navbar-overlay__logo"
               />
@@ -84,7 +74,7 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="navbar-overlay__middle">
+          <div className="navbar-overlay__center">
             <nav className="navbar-overlay__nav">
               <Link to="/" onClick={handleCloseMenu}>HOME</Link>
               <Link to="/proyectos" onClick={handleCloseMenu}>PROYECTOS</Link>
