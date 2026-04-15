@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../Styles/Home/Navbar.css';
 
-import logoImage from '../../../public/img/1/logo-navbar.png';
+import logoImage from '../../../public/img/1/logo-git add .
+git commit -m "Primer commit"
+git branch -M main
+git remote add origin https://github.com/angelarias1/Nat_Coday.git
+git push -u origin main.png';
 import menuIcon from '../../../public/img/1/menu.png';
 import closeIcon from '../../../public/img/1/close.png';
 import instagramIcon from '../../../public/img/1/ig.png';
