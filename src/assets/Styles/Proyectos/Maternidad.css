@@ -1,0 +1,196 @@
+.maternidad-one {
+  width: 100%;
+  background-color: #d8d4cf;
+  padding: 56px 0 120px;
+  overflow: hidden;
+}
+
+.maternidad-one__container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.maternidad-one__grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 460px) minmax(220px, 290px);
+  align-items: start;
+  justify-content: space-between;
+  column-gap: 92px;
+}
+
+.maternidad-one__image-block {
+  width: 100%;
+  max-width: 460px;
+  justify-self: end;
+  transform: translateX(470px);
+}
+
+.maternidad-one__image {
+  width: 100%;
+  height: 720px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.maternidad-one__info {
+  width: 100%;
+  max-width: 290px;
+  align-self: start;
+  margin-top: 10px;
+  transform: translateX(-210px);
+}
+
+.maternidad-one__eyebrow {
+  display: inline-block;
+  margin-bottom: 42px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #5f5a57;
+}
+
+.maternidad-one__title {
+  margin: 0 0 28px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.82rem;
+  line-height: 1.14;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #5f5956;
+}
+
+.maternidad-one__button {
+  min-width: 136px;
+  height: 36px;
+  padding: 0 18px;
+  border: 1px solid #7f7771;
+  border-radius: 999px;
+  background-color: transparent;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #5f5956;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.maternidad-one__button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .maternidad-one {
+    padding: 42px 0 72px;
+  }
+
+  .maternidad-one__container {
+    padding: 0;
+  }
+
+  .maternidad-one__grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .maternidad-one__info,
+  .maternidad-one__image-block {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .maternidad-one__info {
+    margin-top: 0;
+    text-align: left;
+    order: 1;
+  }
+
+  .maternidad-one__image-block {
+    order: 2;
+  }
+
+  .maternidad-one__eyebrow {
+    margin-bottom: 18px;
+    font-size: 0.74rem;
+  }
+
+  .maternidad-one__title {
+    font-size: 1.5rem;
+    line-height: 1.16;
+    margin-bottom: 18px;
+  }
+
+  .maternidad-one__button {
+    min-width: 128px;
+    height: 34px;
+    font-size: 0.86rem;
+  }
+
+  .maternidad-one__image {
+    height: 520px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .maternidad-one {
+    padding: 70px 0 96px;
+  }
+
+  .maternidad-one__container {
+    padding: 0;
+  }
+
+  .maternidad-one__grid {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .maternidad-one__info,
+  .maternidad-one__image-block {
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .maternidad-one__info {
+    margin-top: 0;
+    text-align: center;
+    order: 1;
+  }
+
+  .maternidad-one__image-block {
+    order: 2;
+    max-width: 520px;
+  }
+
+  .maternidad-one__eyebrow {
+    margin-bottom: 22px;
+    font-size: 0.76rem;
+  }
+
+  .maternidad-one__title {
+    font-size: 1.7rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .maternidad-one__button {
+    min-width: 132px;
+    height: 35px;
+    font-size: 0.88rem;
+  }
+
+  .maternidad-one__image {
+    height: 700px;
+  }
+}

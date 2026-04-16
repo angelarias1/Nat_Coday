@@ -92,6 +92,7 @@
   width: auto;
   height: 48px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .navbar-overlay__tagline {

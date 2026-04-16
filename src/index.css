@@ -1,3 +1,14 @@
+:root {
+  --site-max-width: 1740px;
+  --site-padding-desktop: 36px;
+  --site-padding-tablet: 20px;
+  --site-padding-mobile: 14px;
+
+  --site-green-gap-desktop: 28px;
+  --site-green-gap-tablet: 14px;
+  --site-green-gap-mobile: 10px;
+}
+
 /* Reset básico */
 *,
 *::before,
@@ -21,10 +32,56 @@ body,
 /* Base general */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #e9e9e9;
+  background: blue;
   color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.page-width-shell {
+  position: relative;
+  width: 100%;
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* rojo: se queda donde ya está */
+.page-width-shell::before,
+.page-width-shell::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: red;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.page-width-shell::before {
+  left: var(--site-padding-desktop);
+}
+
+.page-width-shell::after {
+  right: var(--site-padding-desktop);
+}
+
+/* verde: ocupa de rojo a rojo */
+.page-width-shell__inner {
+  width: calc(100% - (var(--site-padding-desktop) * 2));
+  margin: 0 auto;
+  min-height: 100vh;
+  background: limegreen;
+  box-sizing: border-box;
+}
+
+/* claro: más angosto para que se vea el verde a los lados */
+.page-width-shell__content {
+  width: calc(100% - (var(--site-green-gap-desktop) * 2));
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #d8d4cf;
 }
 
 /* Elementos comunes */
@@ -70,11 +127,48 @@ ol {
   list-style: none;
 }
 
-/* Evita desbordes raros */
 section,
 div,
 main,
 footer,
 header {
   width: 100%;
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .page-width-shell::before {
+    left: var(--site-padding-mobile);
+  }
+
+  .page-width-shell::after {
+    right: var(--site-padding-mobile);
+  }
+
+  .page-width-shell__inner {
+    width: calc(100% - (var(--site-padding-mobile) * 2));
+  }
+
+  .page-width-shell__content {
+    width: calc(100% - (var(--site-green-gap-mobile) * 2));
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .page-width-shell::before {
+    left: var(--site-padding-tablet);
+  }
+
+  .page-width-shell::after {
+    right: var(--site-padding-tablet);
+  }
+
+  .page-width-shell__inner {
+    width: calc(100% - (var(--site-padding-tablet) * 2));
+  }
+
+  .page-width-shell__content {
+    width: calc(100% - (var(--site-green-gap-tablet) * 2));
+  }
 }

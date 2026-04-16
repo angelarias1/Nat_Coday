@@ -1,0 +1,228 @@
+.newborn-one {
+  width: 100%;
+  background-color: #d8d4cf;
+  padding: 56px 0 120px;
+  overflow: hidden;
+}
+
+.newborn-one__container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.newborn-one__grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(520px, 640px) minmax(220px, 290px);
+  align-items: start;
+  column-gap: 92px;
+}
+
+.newborn-one__heading-block {
+  grid-column: 2 / 3;
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 34px;
+  margin-left: -118px;
+}
+
+.newborn-one__title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  line-height: 0.95;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #5f5956;
+}
+
+.newborn-one__image-block {
+  grid-column: 2 / 3;
+  width: 100%;
+  max-width: 640px;
+  margin-left: -118px;
+}
+
+.newborn-one__image {
+  width: 100%;
+  height: 560px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.newborn-one__info {
+  grid-column: 3 / 4;
+  width: 100%;
+  max-width: 290px;
+  align-self: start;
+  margin-top: 10px;
+}
+
+.newborn-one__eyebrow {
+  display: inline-block;
+  margin-bottom: 42px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.74rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #5f5a57;
+}
+
+.newborn-one__subtitle {
+  margin: 0 0 28px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.82rem;
+  line-height: 1.14;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #5f5956;
+}
+
+.newborn-one__button {
+  min-width: 136px;
+  height: 36px;
+  padding: 0 18px;
+  border: 1px solid #7f7771;
+  border-radius: 999px;
+  background-color: transparent;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #5f5956;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.newborn-one__button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .newborn-one {
+    padding: 42px 0 72px;
+  }
+
+  .newborn-one__container {
+    padding: 0;
+  }
+
+  .newborn-one__grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .newborn-one__heading-block,
+  .newborn-one__image-block,
+  .newborn-one__info {
+    grid-column: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .newborn-one__heading-block {
+    margin-bottom: 0;
+  }
+
+  .newborn-one__title {
+    font-size: 3rem;
+    line-height: 0.95;
+    text-align: left;
+  }
+
+  .newborn-one__image {
+    height: 360px;
+  }
+
+  .newborn-one__info {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .newborn-one__eyebrow {
+    margin-bottom: 18px;
+    font-size: 0.74rem;
+  }
+
+  .newborn-one__subtitle {
+    font-size: 1.5rem;
+    line-height: 1.16;
+    margin-bottom: 18px;
+  }
+
+  .newborn-one__button {
+    min-width: 128px;
+    height: 34px;
+    font-size: 0.86rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .newborn-one {
+    padding: 70px 0 96px;
+  }
+
+  .newborn-one__container {
+    padding: 0;
+  }
+
+  .newborn-one__grid {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .newborn-one__heading-block,
+  .newborn-one__image-block,
+  .newborn-one__info {
+    grid-column: auto;
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newborn-one__heading-block {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .newborn-one__title {
+    font-size: 4rem;
+    line-height: 0.95;
+    text-align: center;
+  }
+
+  .newborn-one__image {
+    height: 470px;
+  }
+
+  .newborn-one__info {
+    margin-top: 0;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .newborn-one__eyebrow {
+    margin-bottom: 22px;
+    font-size: 0.76rem;
+  }
+
+  .newborn-one__subtitle {
+    font-size: 1.7rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .newborn-one__button {
+    min-width: 132px;
+    height: 35px;
+    font-size: 0.88rem;
+  }
+}

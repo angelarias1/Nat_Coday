@@ -4,7 +4,7 @@ import '../Styles/Navbar.css';
 
 import menuIcon from '../../../public/img/1/menu.png';
 import closeIcon from '../../../public/img/1/close.png';
-import overlayLogo from '../../../public/img/logotipo.png';
+import overlayLogo from '../../../public/isotipo.png';
 import instagramIcon from '../../../public/img/Ig.png';
 import facebookIcon from '../../../public/img/Fc.png';
 import linkedinIcon from '../../../public/img/IN.png';
