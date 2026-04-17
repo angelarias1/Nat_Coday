@@ -13,25 +13,25 @@
 
 .newborn-one__grid {
   display: grid;
-  grid-template-columns: 1fr minmax(520px, 640px) minmax(220px, 290px);
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  column-gap: 92px;
+  column-gap: 40px;
 }
 
 .newborn-one__heading-block {
   grid-column: 2 / 3;
   width: 100%;
-  max-width: 760px;
+  max-width: 580px;
   margin-bottom: 34px;
-  margin-left: -118px;
 }
 
 .newborn-one__title {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 5rem;
+  font-size: clamp(3.1rem, 3.7vw, 3.9rem);
   line-height: 0.95;
-  font-weight: 300;
+  font-weight: 100;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #5f5956;
 }
@@ -39,22 +39,21 @@
 .newborn-one__image-block {
   grid-column: 2 / 3;
   width: 100%;
-  max-width: 640px;
-  margin-left: -118px;
+  max-width: 550px;
 }
 
 .newborn-one__image {
   width: 100%;
-  height: 560px;
+  height: 550px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 
 .newborn-one__info {
   grid-column: 3 / 4;
   width: 100%;
-  max-width: 290px;
+  max-width: 400px;
   align-self: start;
   margin-top: 10px;
 }
@@ -74,7 +73,7 @@
 .newborn-one__subtitle {
   margin: 0 0 28px;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.82rem;
+  font-size: clamp(1.45rem, 1.75vw, 1.82rem);
   line-height: 1.14;
   font-weight: 400;
   text-transform: uppercase;
@@ -137,7 +136,8 @@
   }
 
   .newborn-one__image {
-    height: 360px;
+    height: 300px;
+    object-fit: contain;
   }
 
   .newborn-one__info {
@@ -200,7 +200,8 @@
   }
 
   .newborn-one__image {
-    height: 470px;
+    height: 400px;
+    object-fit: contain;
   }
 
   .newborn-one__info {

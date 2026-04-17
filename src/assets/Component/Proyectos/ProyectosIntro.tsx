@@ -4,7 +4,7 @@ function ProyectosIntro() {
   return (
     <section className="projects-intro">
       <div className="projects-intro__container">
-        <div className="projects-intro__grid">
+        <div className="projects-intro__layout">
           <div className="projects-intro__heading">
             <span className="projects-intro__eyebrow">PROYECTOS</span>
 

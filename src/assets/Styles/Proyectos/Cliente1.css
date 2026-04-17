@@ -13,16 +13,15 @@
 
 .cliente-one__grid {
   display: grid;
-  grid-template-columns: minmax(360px, 460px) minmax(220px, 290px);
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  justify-content: space-between;
-  column-gap: 92px;
+  column-gap: 40px;
 }
 
 .cliente-one__image-block {
+  grid-column: 2 / 3;
   width: 100%;
   max-width: 460px;
-  justify-self: start;
 }
 
 .cliente-one__image {
@@ -34,6 +33,7 @@
 }
 
 .cliente-one__info {
+  grid-column: 3 / 4;
   width: 100%;
   max-width: 290px;
   align-self: start;
@@ -98,6 +98,7 @@
 
   .cliente-one__info,
   .cliente-one__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -153,6 +154,7 @@
 
   .cliente-one__info,
   .cliente-one__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 760px;
     margin-left: auto;

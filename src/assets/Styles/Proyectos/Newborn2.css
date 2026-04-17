@@ -13,18 +13,17 @@
 
 .newborn-two__grid {
   display: grid;
-  grid-template-columns: minmax(220px, 290px) minmax(520px, 640px);
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  justify-content: space-between;
-  column-gap: 92px;
+  column-gap: 40px;
 }
 
 .newborn-two__info {
+  grid-column: 2 / 3;
   width: 100%;
-  max-width: 290px;
+  max-width: 360px;
   align-self: start;
   margin-top: 10px;
-  margin-left: 480px;
 }
 
 .newborn-two__eyebrow {
@@ -42,7 +41,7 @@
 .newborn-two__subtitle {
   margin: 0 0 28px;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.82rem;
+  font-size: clamp(1.45rem, 1.75vw, 1.82rem);
   line-height: 1.14;
   font-weight: 400;
   text-transform: uppercase;
@@ -70,13 +69,14 @@
 }
 
 .newborn-two__image-block {
+  grid-column: 3 / 4;
   width: 100%;
-  max-width: 640px;
+  max-width: 520px;
 }
 
 .newborn-two__image {
   width: 100%;
-  height: 560px;
+  height: 520px;
   display: block;
   object-fit: cover;
   object-position: center center;
@@ -99,6 +99,7 @@
 
   .newborn-two__info,
   .newborn-two__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -108,6 +109,7 @@
   .newborn-two__info {
     margin-top: 0;
     text-align: left;
+    justify-self: stretch;
   }
 
   .newborn-two__eyebrow {
@@ -149,6 +151,7 @@
 
   .newborn-two__info,
   .newborn-two__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 760px;
     margin-left: auto;
@@ -158,6 +161,7 @@
   .newborn-two__info {
     margin-top: 0;
     text-align: center;
+    justify-self: center;
   }
 
   .newborn-two__eyebrow {
@@ -177,7 +181,11 @@
     font-size: 0.88rem;
   }
 
+  .newborn-two__image-block {
+    max-width: 520px;
+  }
+
   .newborn-two__image {
-    height: 470px;
+    height: 520px;
   }
 }

@@ -13,33 +13,31 @@
 
 .maternidad-one__grid {
   display: grid;
-  grid-template-columns: minmax(360px, 460px) minmax(220px, 290px);
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  justify-content: space-between;
-  column-gap: 92px;
+  column-gap: 40px;
 }
 
 .maternidad-one__image-block {
+  grid-column: 2 / 3;
   width: 100%;
   max-width: 460px;
-  justify-self: end;
-  transform: translateX(470px);
 }
 
 .maternidad-one__image {
   width: 100%;
   height: 720px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 
 .maternidad-one__info {
+  grid-column: 3 / 4;
   width: 100%;
   max-width: 290px;
   align-self: start;
   margin-top: 10px;
-  transform: translateX(-210px);
 }
 
 .maternidad-one__eyebrow {
@@ -101,6 +99,7 @@
 
   .maternidad-one__info,
   .maternidad-one__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -136,6 +135,7 @@
 
   .maternidad-one__image {
     height: 520px;
+    object-fit: contain;
   }
 }
 
@@ -156,6 +156,7 @@
 
   .maternidad-one__info,
   .maternidad-one__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 760px;
     margin-left: auto;
@@ -192,5 +193,6 @@
 
   .maternidad-one__image {
     height: 700px;
+    object-fit: contain;
   }
 }

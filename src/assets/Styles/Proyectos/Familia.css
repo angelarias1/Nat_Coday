@@ -13,18 +13,17 @@
 
 .familia-one__grid {
   display: grid;
-  grid-template-columns: minmax(220px, 290px) minmax(520px, 640px);
+  grid-template-columns: 1fr 0.8fr 1.2fr;
   align-items: start;
-  justify-content: space-between;
-  column-gap: 92px;
+  column-gap: 40px;
 }
 
 .familia-one__info {
+  grid-column: 2 / 3;
   width: 100%;
   max-width: 290px;
   align-self: start;
   margin-top: 10px;
-  margin-left: 480px;
 }
 
 .familia-one__eyebrow {
@@ -70,6 +69,7 @@
 }
 
 .familia-one__image-block {
+  grid-column: 3 / 4;
   width: 100%;
   max-width: 640px;
 }
@@ -99,6 +99,7 @@
 
   .familia-one__info,
   .familia-one__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -149,6 +150,7 @@
 
   .familia-one__info,
   .familia-one__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 760px;
     margin-left: auto;

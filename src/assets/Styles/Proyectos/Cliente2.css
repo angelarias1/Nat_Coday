@@ -13,18 +13,17 @@
 
 .cliente-two__grid {
   display: grid;
-  grid-template-columns: minmax(220px, 290px) minmax(360px, 460px);
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  justify-content: space-between;
   column-gap: 40px;
 }
 
 .cliente-two__info {
+  grid-column: 2 / 3;
   width: 100%;
   max-width: 290px;
   align-self: start;
   margin-top: 10px;
-  margin-left: 700px;
 }
 
 .cliente-two__eyebrow {
@@ -74,9 +73,9 @@
 }
 
 .cliente-two__image-block {
+  grid-column: 3 / 4;
   width: 100%;
   max-width: 460px;
-  justify-self: end;
 }
 
 .cliente-two__image {
@@ -104,6 +103,7 @@
 
   .cliente-two__info,
   .cliente-two__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 100%;
     margin-left: 0;
@@ -154,6 +154,7 @@
 
   .cliente-two__info,
   .cliente-two__image-block {
+    grid-column: auto;
     width: 100%;
     max-width: 760px;
     margin-left: auto;
