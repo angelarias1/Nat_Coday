@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 import '../Styles/Navbar.css';
 
 import menuIcon from '../../../public/img/1/menu.png';
-import closeIcon from '../../../public/img/1/close.png';
+import closeIcon from '../../../public/img/1/closee.png';
 import overlayLogo from '../../../public/isotipo.png';
 import instagramIcon from '../../../public/img/Ig.png';
 import facebookIcon from '../../../public/img/Fc.png';
 import linkedinIcon from '../../../public/img/IN.png';
-import ornamentImage from '../../../public/img/1/1.12.png';
+import ornamentImage from '../../../public/img/1/logoo.png';
 
-function Navbar() {
+type NavbarProps = {
+  theme?: 'blue' | 'green' | 'red';
+};
+
+function Navbar({ theme = 'blue' }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleMenu = () => {
@@ -23,7 +27,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="navbar">
+      <header className={`navbar navbar--${theme}`}>
         <div className="navbar__container">
           <Link to="/" className="navbar__brand" onClick={handleCloseMenu}>
             NAT CODAY
@@ -78,7 +82,7 @@ function Navbar() {
             <nav className="navbar-overlay__nav">
               <Link to="/" onClick={handleCloseMenu}>HOME</Link>
               <Link to="/proyectos" onClick={handleCloseMenu}>PROYECTOS</Link>
-              <Link to="/bio" onClick={handleCloseMenu}>BIO</Link>
+              <Link to="/bio" onClick={handleCloseMenu}>NOSOTROS</Link>
               <Link to="/servicios" onClick={handleCloseMenu}>SERVICIOS</Link>
               <Link to="/contacto" onClick={handleCloseMenu}>CONTACTO</Link>
             </nav>

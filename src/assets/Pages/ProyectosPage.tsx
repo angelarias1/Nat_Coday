@@ -20,6 +20,10 @@ type SectionId =
 
 function ProyectosPage() {
   const [activeCategory, setActiveCategory] = useState<SectionId>('proyectos');
+  const [menuStopped, setMenuStopped] = useState(false);
+
+  const pageRef = useRef<HTMLElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const proyectosRef = useRef<HTMLElement | null>(null);
   const newborn1Ref = useRef<HTMLElement | null>(null);
@@ -75,6 +79,41 @@ function ProyectosPage() {
     return () => observer.disconnect();
   }, [sections]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!pageRef.current || !menuRef.current) return;
+
+      const pageRect = pageRef.current.getBoundingClientRect();
+      const menuHeight = menuRef.current.offsetHeight;
+
+      const desktopTop = 146;
+      const tabletTop = 92;
+      const mobileTop = 78;
+
+      let topOffset = desktopTop;
+
+      if (window.innerWidth <= 479) {
+        topOffset = mobileTop;
+      } else if (window.innerWidth <= 1023) {
+        topOffset = tabletTop;
+      }
+
+      const pageBottomInViewport = pageRect.bottom;
+      const limitPoint = topOffset + menuHeight;
+
+      setMenuStopped(pageBottomInViewport <= limitPoint);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   const handleMenuChange = (id: string) => {
     const targetSection = sections.find((section) => section.id === id);
 
@@ -87,8 +126,13 @@ function ProyectosPage() {
   };
 
   return (
-    <section className="proyectos-page">
-      <div className="proyectos-page__menu-overlay">
+    <section ref={pageRef} className="proyectos-page">
+      <div
+        ref={menuRef}
+        className={`proyectos-page__menu-overlay ${
+          menuStopped ? 'proyectos-page__menu-overlay--stopped' : ''
+        }`}
+      >
         <MenuProyectos
           activeItem={activeCategory}
           onChange={handleMenuChange}

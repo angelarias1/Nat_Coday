@@ -15,8 +15,14 @@
   );
   z-index: 40;
   width: auto;
+  background-color: #d8d4cf;
 }
 
+.proyectos-page__menu-overlay--stopped {
+  position: absolute;
+  top: auto;
+  bottom: 24px;
+}
 .proyectos-page__section {
   width: 100%;
   scroll-margin-top: 110px;
