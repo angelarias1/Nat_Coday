@@ -3,6 +3,7 @@ import Trayectoria from '../Component/Bio_Nosotros/Trayectoria';
 import Profesional from '../Component/Bio_Nosotros/Profesional';
 import Objetivo from '../Component/Bio_Nosotros/Objetivo';
 import Compromiso from '../Component/Bio_Nosotros/Compromiso';
+import Imagenes from '../Component/Bio_Nosotros/imagenes';
 import '../Styles/Bio_Nosotros/BioPage.css';
 function BioPage() {
   return (
@@ -17,18 +18,25 @@ function BioPage() {
             <section className="bio-page__section">
               <Trayectoria />
             </section>
+            
+            <section className="bio-page__section">
+              <Compromiso />
+            </section>
 
             <section className="bio-page__section">
-              <Profesional />
-            </section>
+              <Imagenes />
+            </section> 
+
+          
 
             <section className="bio-page__section">
               <Objetivo />
             </section>
-
-            <section className="bio-page__section">
-              <Compromiso />
+             
+             <section className="bio-page__section">
+              <Profesional />
             </section>
+            
           </div>
         </div>
       </div>

@@ -1,0 +1,139 @@
+.compromiso-section {
+  width: 100%;
+  background-color: #d8d4cf;
+  padding: 120px 0 120px;
+  overflow: hidden;
+}
+
+.compromiso-section__container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.compromiso-section__heading {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 54px;
+  padding-left: 130px;
+  box-sizing: border-box;
+}
+
+.compromiso-section__title {
+  margin: 0;
+  width: 100%;
+  max-width: 760px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 3vw, 4.6rem);
+  line-height: 1.02;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #5f5956;
+}
+
+.compromiso-section__content-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 130px;
+  box-sizing: border-box;
+}
+
+.compromiso-section__columns {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(260px, 1fr);
+  column-gap: 74px;
+  align-items: start;
+}
+
+.compromiso-section__column {
+  width: 100%;
+}
+
+.compromiso-section__text {
+  margin: 0 0 16px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #5f5a57;
+}
+
+.compromiso-section__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .compromiso-section {
+    padding: 72px 0 72px;
+  }
+
+  .compromiso-section__heading {
+    max-width: 100%;
+    margin: 0 0 30px;
+    padding-left: 0;
+  }
+
+  .compromiso-section__title {
+    max-width: 100%;
+    font-size: 2.7rem;
+    line-height: 0.92;
+    letter-spacing: 0;
+  }
+
+  .compromiso-section__content-wrap {
+    max-width: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .compromiso-section__columns {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    column-gap: 0;
+  }
+
+  .compromiso-section__text {
+    font-size: 0.94rem;
+    line-height: 1.62;
+    margin-bottom: 14px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .compromiso-section {
+    padding: 96px 0 96px;
+  }
+
+  .compromiso-section__heading {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    padding-left: 18px;
+  }
+
+  .compromiso-section__title {
+    max-width: 520px;
+    font-size: 4rem;
+    line-height: 0.9;
+    letter-spacing: 0;
+  }
+
+  .compromiso-section__content-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-left: 18px;
+  }
+
+  .compromiso-section__columns {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 42px;
+  }
+
+  .compromiso-section__text {
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+}

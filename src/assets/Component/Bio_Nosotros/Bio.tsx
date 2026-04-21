@@ -6,8 +6,8 @@ function Bio() {
     <section className="bio-section">
       <div className="bio-section__container">
         <div className="bio-section__grid">
-          <div className="bio-section__content">
-            <div className="bio-section__content-top">
+          <div className="bio-section__left">
+            <div className="bio-section__copy">
               <span className="bio-section__eyebrow">BIO</span>
 
               <h1 className="bio-section__title">
@@ -34,7 +34,7 @@ function Bio() {
             <div className="bio-section__brand">NAT CODAY</div>
           </div>
 
-          <div className="bio-section__image-block">
+          <div className="bio-section__right">
             <img
               src={bioImage}
               alt="Retrato principal de bio"

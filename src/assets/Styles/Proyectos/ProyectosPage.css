@@ -1,7 +1,7 @@
 .proyectos-page {
   position: relative;
   width: 100%;
-  background-color: transparent;
+  background-color: #d8d4cf;
 }
 
 .proyectos-page__menu-overlay {
@@ -23,13 +23,15 @@
   top: auto;
   bottom: 24px;
 }
+
 .proyectos-page__section {
   width: 100%;
   scroll-margin-top: 110px;
+  background-color: #d8d4cf;
 }
 
 .proyectos-page__placeholder-section {
-  background-color: transparent;
+  background-color: #d8d4cf;
   padding: 100px 0 140px;
 }
 
@@ -37,6 +39,7 @@
   width: 100%;
   padding: 0;
   box-sizing: border-box;
+  background-color: #d8d4cf;
 }
 
 .proyectos-page__placeholder-container h2 {
@@ -65,14 +68,17 @@
     box-sizing: border-box;
     z-index: 40;
     overflow: hidden;
+    background-color: #d8d4cf;
   }
 
   .proyectos-page__section {
     scroll-margin-top: 140px;
+    background-color: #d8d4cf;
   }
 
   .proyectos-page__placeholder-section {
     padding: 56px 0 72px;
+    background-color: #d8d4cf;
   }
 
   .proyectos-page__placeholder-container h2 {
@@ -95,14 +101,17 @@
     padding: 0;
     box-sizing: border-box;
     z-index: 40;
+    background-color: #d8d4cf;
   }
 
   .proyectos-page__section {
     scroll-margin-top: 150px;
+    background-color: #d8d4cf;
   }
 
   .proyectos-page__placeholder-section {
     padding: 80px 0 96px;
+    background-color: #d8d4cf;
   }
 
   .proyectos-page__placeholder-container h2 {

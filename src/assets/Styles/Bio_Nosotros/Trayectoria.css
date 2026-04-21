@@ -1,0 +1,215 @@
+
+.trayectoria-section {
+  width: 100%;
+  background-color: #d8d4cf;
+  padding: 250px 0 250px;
+  overflow: hidden;
+}
+
+.trayectoria-section__container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.trayectoria-section__grid {
+  display: grid;
+  grid-template-columns: minmax(520px, 1.15fr) minmax(280px, 0.72fr);
+  align-items: start;
+  column-gap: 48px;
+}
+
+.trayectoria-section__image-block {
+  width: 100%;
+  max-width: 100%;
+}
+
+.trayectoria-section__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.trayectoria-section__content {
+  width: 100%;
+  max-width: 340px;
+  padding-top: 6px;
+  justify-self: center;
+  text-align: left;
+}
+
+.trayectoria-section__title {
+  margin: 0 0 18px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.08;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #5f5956;
+}
+
+.trayectoria-section__text {
+  margin: 0 0 14px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #5f5a57;
+}
+
+.trayectoria-section__text:last-of-type {
+  margin-bottom: 22px;
+}
+
+.trayectoria-section__text--mobile {
+  display: none;
+}
+
+.trayectoria-section__button {
+  min-width: 122px;
+  height: 32px;
+  padding: 0 14px;
+  border: 1px solid #7f7771;
+  border-radius: 999px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f5956;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.trayectoria-section__button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.trayectoria-section__button-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .trayectoria-section {
+    padding: 72px 0 88px;
+  }
+
+  .trayectoria-section__grid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .trayectoria-section__image-block,
+  .trayectoria-section__content {
+    max-width: 100%;
+  }
+
+  .trayectoria-section__content {
+    order: 1;
+    padding-top: 0;
+  }
+
+  .trayectoria-section__image-block {
+    order: 2;
+  }
+
+  .trayectoria-section__image {
+    height: 260px;
+  }
+
+  .trayectoria-section__title {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+  }
+
+  .trayectoria-section__text {
+    font-size: 0.92rem;
+    line-height: 1.62;
+    margin-bottom: 14px;
+  }
+
+  .trayectoria-section__text:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  .trayectoria-section__text--desktop-tablet {
+    display: none;
+  }
+
+  .trayectoria-section__text--mobile {
+    display: block;
+  }
+
+  .trayectoria-section__button {
+    min-width: 134px;
+    height: 34px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .trayectoria-section {
+    padding: 96px 0 110px;
+  }
+
+  .trayectoria-section__grid {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .trayectoria-section__image-block,
+  .trayectoria-section__content {
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trayectoria-section__content {
+    order: 1;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .trayectoria-section__image-block {
+    order: 2;
+  }
+
+  .trayectoria-section__image {
+    height: 420px;
+  }
+
+  .trayectoria-section__text {
+    font-size: 0.96rem;
+    line-height: 1.64;
+  }
+
+  .trayectoria-section__text--desktop-tablet {
+    display: block;
+  }
+
+  .trayectoria-section__text--mobile {
+    display: none;
+  }
+
+  .trayectoria-section__button {
+    min-width: 140px;
+    height: 36px;
+    margin: 0 auto;
+    font-size: 0.84rem;
+  }
+}
