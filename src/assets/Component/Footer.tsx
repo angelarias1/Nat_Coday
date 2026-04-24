@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/Footer.css';
 
 import footerLogo from '../../../public/img/logotipo.png';
@@ -7,6 +8,40 @@ import facebookIcon from '../../../public/img/Fc.png';
 import linkedinIcon from '../../../public/img/IN.png';
 
 const Footer: React.FC = () => {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    telefono: '',
+    email: '',
+    tipoSesion: '',
+    mensaje: '',
+  });
+
+  const emailAddress = 'hola@natcoday.com';
+  const whatsappNumber = '529988877885';
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(emailAddress);
+    } catch (error) {
+      console.error('No se pudo copiar el correo:', error);
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('Formulario enviado:', formData);
+  };
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -29,38 +64,104 @@ const Footer: React.FC = () => {
                 Ciudad de México.
               </p>
 
-              <p>+52 998 887 7885</p>
+              <p>
+                <a
+                  href={`https://wa.me/${whatsappNumber}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer__plain-link"
+                >
+                  +52 998 887 7885
+                </a>
+              </p>
 
-              <p>hola@natcoday.com</p>
+              <p>
+                <button
+                  type="button"
+                  onClick={handleCopyEmail}
+                  className="footer__plain-button"
+                >
+                  hola@natcoday.com
+                </button>
+              </p>
             </div>
           </div>
 
-          <div className="footer__form">
+          <form className="footer__form" onSubmit={handleSubmit}>
             <div className="footer__field">
-              <span className="footer__label">NOMBRE</span>
+              <label htmlFor="nombre" className="footer__label">
+                NOMBRE
+              </label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                value={formData.nombre}
+                onChange={handleChange}
+                className="footer__input"
+              />
             </div>
 
             <div className="footer__field">
-              <span className="footer__label">TELÉFONO</span>
+              <label htmlFor="telefono" className="footer__label">
+                TELÉFONO
+              </label>
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                value={formData.telefono}
+                onChange={handleChange}
+                className="footer__input"
+              />
             </div>
 
             <div className="footer__field">
-              <span className="footer__label">EMAIL</span>
+              <label htmlFor="email" className="footer__label">
+                EMAIL
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="footer__input"
+              />
             </div>
 
             <div className="footer__field">
-              <span className="footer__label">TIPO DE SESIÓN</span>
+              <label htmlFor="tipoSesion" className="footer__label">
+                TIPO DE SESIÓN
+              </label>
+              <input
+                id="tipoSesion"
+                name="tipoSesion"
+                type="text"
+                value={formData.tipoSesion}
+                onChange={handleChange}
+                className="footer__input"
+              />
             </div>
 
             <div className="footer__field footer__field--message">
-              <span className="footer__label">MENSAJE</span>
+              <label htmlFor="mensaje" className="footer__label">
+                MENSAJE
+              </label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                value={formData.mensaje}
+                onChange={handleChange}
+                className="footer__textarea"
+              />
             </div>
 
-            <button type="button" className="footer__submit">
+            <button type="submit" className="footer__submit">
               <span className="footer__submit-text">Enviar</span>
               <span className="footer__submit-circle">→</span>
             </button>
-          </div>
+          </form>
         </div>
 
         <div className="footer__bottom">
@@ -84,8 +185,8 @@ const Footer: React.FC = () => {
 
           <div className="footer__meta-row">
             <nav className="footer__nav">
-              <a href="#proyectos">PROYECTOS</a>
-              <a href="#nosotros">NOSOTROS</a>
+              <Link to="/proyectos">PROYECTOS</Link>
+              <Link to="/bio">NOSOTROS</Link>
               <a href="#servicios">SERVICIOS</a>
               <a href="#contacto">CONTACTO</a>
             </nav>
@@ -96,7 +197,13 @@ const Footer: React.FC = () => {
             </p>
 
             <div className="footer__socials">
-              <a href="/" aria-label="Instagram" className="footer__social-link">
+              <a
+                href="https://www.instagram.com/natcodayphotography/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="footer__social-link"
+              >
                 <img
                   src={instagramIcon}
                   alt="Instagram"
@@ -104,7 +211,13 @@ const Footer: React.FC = () => {
                 />
               </a>
 
-              <a href="/" aria-label="Facebook" className="footer__social-link">
+              <a
+                href="https://www.facebook.com/natcodayphotography/?ref=NONE_xav_ig_profile_page_web#"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="footer__social-link"
+              >
                 <img
                   src={facebookIcon}
                   alt="Facebook"
@@ -128,8 +241,22 @@ const Footer: React.FC = () => {
             </a>
 
             <div className="footer__contact-mini">
-              <span>+52 998 887 7885</span>
-              <span>hola@natcoday.com</span>
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                rel="noreferrer"
+                className="footer__plain-link"
+              >
+                +52 998 887 7885
+              </a>
+
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="footer__plain-button"
+              >
+                hola@natcoday.com
+              </button>
             </div>
 
             <a href="/" className="footer__legal-link footer__legal-link--right">

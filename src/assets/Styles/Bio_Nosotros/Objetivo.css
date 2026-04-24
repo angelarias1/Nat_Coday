@@ -1,6 +1,6 @@
 .objetivo-section {
   width: 100%;
-  background-color: #d8d4cf;
+  background-color: #DED9D3;
   padding: 135px 0 135px;
   overflow: hidden;
 }
@@ -126,7 +126,7 @@
   }
 
   .objetivo-section__text {
-    font-size: 0.96rem;
+    font-size: 0.88rem;
     line-height: 1.64;
   }
 
@@ -156,42 +156,56 @@
   .objetivo-section__grid {
     grid-template-columns: 1fr;
     row-gap: 36px;
-    justify-content: stretch;
+    justify-items: center;
+    align-items: start;
   }
 
   .objetivo-section__left,
   .objetivo-section__large-image-block {
     grid-column: auto;
     width: 100%;
-    max-width: 760px;
+    max-width: 660px;
     margin-left: auto;
     margin-right: auto;
-    justify-self: stretch;
+    justify-self: center;
+  }
+
+  .objetivo-section__left {
+    text-align: center;
   }
 
   .objetivo-section__copy {
     max-width: 590px;
-    margin-bottom: 42px;
+    margin: 0 auto 42px;
   }
 
   .objetivo-section__text {
     font-size: 1rem;
     line-height: 1.66;
+    text-align: center;
   }
 
   .objetivo-section__button {
     min-width: 150px;
     height: 38px;
     font-size: 0.86rem;
+    margin: 0 auto;
+    display: inline-flex;
   }
 
   .objetivo-section__small-image-block {
-    max-width: 390px;
+    width: 100%;
+    max-width: 660px;
     height: 580px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .objetivo-section__large-image-block {
+    width: 100%;
     max-width: 660px;
     height: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

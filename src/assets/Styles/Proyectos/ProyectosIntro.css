@@ -1,6 +1,6 @@
 .projects-intro {
   width: 100%;
-  background-color: #d8d4cf;
+  background-color: #DED9D3;
   padding: 150px 0 120px;
   overflow: hidden;
 }
@@ -46,6 +46,10 @@
   color: #5f5956;
 }
 
+.projects-intro__title--mobile {
+  display: none;
+}
+
 .projects-intro__description {
   grid-column: 3 / 4;
   width: 100%;
@@ -66,10 +70,14 @@
   margin-bottom: 0;
 }
 
+.projects-intro__description--mobile {
+  display: none;
+}
+
 /* Móvil */
 @media (max-width: 479px) {
   .projects-intro {
-    padding: 150px 0 72px;
+    padding: 20px 0 72px;
   }
 
   .projects-intro__layout {
@@ -81,22 +89,24 @@
   .projects-intro__description {
     grid-column: auto;
     width: 100%;
-    max-width: 540px;
+    max-width: 330px;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
   }
 
   .projects-intro__eyebrow {
-    display: block;
-    margin: 0 0 20px;
-    font-size: 0.72rem;
-    text-align: left;
+    display: none;
   }
 
-  .projects-intro__title {
-    font-size: 2.1rem;
-    line-height: 1.04;
+  .projects-intro__title--desktop-tablet {
+    display: none;
+  }
+
+  .projects-intro__title--mobile {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.08;
     text-align: left;
   }
 
@@ -104,10 +114,18 @@
     padding-top: 0;
   }
 
-  .projects-intro__description p {
-    font-size: 0.98rem;
-    line-height: 1.65;
-    margin-bottom: 10px;
+  .projects-intro__description--desktop-tablet {
+    display: none;
+  }
+
+  .projects-intro__description--mobile {
+    display: block;
+  }
+
+  .projects-intro__description--mobile p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
     text-align: left;
   }
 }
@@ -115,7 +133,7 @@
 /* Tablet */
 @media (min-width: 480px) and (max-width: 1023px) {
   .projects-intro {
-    padding: 190px 0 96px;
+    padding: 24px 0 96px;
   }
 
   .projects-intro__layout {
@@ -147,10 +165,23 @@
     text-align: center;
   }
 
-  .projects-intro__title {
+  .projects-intro__title--desktop-tablet {
+    display: block;
     font-size: 1.8rem;
     line-height: 1.04;
     text-align: center;
+  }
+
+  .projects-intro__title--mobile {
+    display: none;
+  }
+
+  .projects-intro__description--desktop-tablet {
+    display: block;
+  }
+
+  .projects-intro__description--mobile {
+    display: none;
   }
 
   .projects-intro__description p {

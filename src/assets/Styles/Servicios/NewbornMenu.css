@@ -1,0 +1,140 @@
+.menu-servicios {
+  width: auto;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+.menu-servicios__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  width: auto;
+}
+
+.menu-servicios__item {
+  width: auto;
+  min-width: 0;
+  height: 32px;
+  padding: 0 16px 0 12px;
+  border: 1px solid #DED9D3;
+  border-radius: 999px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  white-space: nowrap;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1;
+  font-weight: 400;
+  color: rgba(95, 89, 86, 0.45);
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    opacity 0.25s ease;
+  flex-shrink: 0;
+}
+
+.menu-servicios__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: #1f1a17;
+  opacity: 0;
+  flex-shrink: 0;
+  transition: opacity 0.25s ease;
+}
+
+.menu-servicios__label {
+  display: inline-block;
+}
+
+.menu-servicios__item:hover {
+  color: rgba(95, 89, 86, 0.75);
+  border-color: rgba(95, 89, 86, 0.45);
+}
+
+.menu-servicios__item--active {
+  color: #5f5956;
+  border-color: #7f7771;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+.menu-servicios__item--active .menu-servicios__dot {
+  opacity: 1;
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .menu-servicios {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .menu-servicios::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-servicios__list {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: max-content;
+    min-width: max-content;
+    padding: 0 2px 4px;
+  }
+
+  .menu-servicios__item {
+    height: 32px;
+    padding: 0 15px 0 11px;
+    font-size: 0.8rem;
+  }
+
+  .menu-servicios__dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .menu-servicios {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-servicios__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .menu-servicios__item {
+    height: 34px;
+    padding: 0 16px 0 12px;
+    font-size: 0.82rem;
+  }
+
+  .menu-servicios__dot {
+    width: 5px;
+    height: 5px;
+  }
+}

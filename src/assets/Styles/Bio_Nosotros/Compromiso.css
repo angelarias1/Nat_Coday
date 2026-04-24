@@ -1,6 +1,6 @@
 .compromiso-section {
   width: 100%;
-  background-color: #d8d4cf;
+  background-color: #DED9D3;
   padding: 120px 0 120px;
   overflow: hidden;
 }
@@ -111,20 +111,22 @@
   .compromiso-section__heading {
     max-width: 760px;
     margin: 0 auto 40px;
-    padding-left: 18px;
+    padding-left: 0;
   }
 
   .compromiso-section__title {
     max-width: 520px;
+    margin: 0 auto;
     font-size: 4rem;
     line-height: 0.9;
     letter-spacing: 0;
+    text-align: left;
   }
 
   .compromiso-section__content-wrap {
     max-width: 760px;
     margin: 0 auto;
-    padding-left: 18px;
+    padding-left: 0;
   }
 
   .compromiso-section__columns {
@@ -135,5 +137,6 @@
   .compromiso-section__text {
     font-size: 0.95rem;
     line-height: 1.62;
+    text-align: left;
   }
 }

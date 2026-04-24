@@ -65,10 +65,12 @@
   width: 100%;
   min-height: 46px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   padding: 4px 0 12px;
   border-bottom: 1px solid rgba(243, 238, 233, 0.6);
   margin-bottom: 18px;
+  gap: 8px;
 }
 
 .footer__field--message {
@@ -85,6 +87,31 @@
   font-weight: 400;
   color: rgba(243, 238, 233, 0.92);
   text-transform: uppercase;
+}
+
+.footer__input,
+.footer__textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f3eee9;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__input::placeholder,
+.footer__textarea::placeholder {
+  color: rgba(243, 238, 233, 0.55);
+}
+
+.footer__textarea {
+  resize: none;
+  min-height: 84px;
 }
 
 .footer__submit {
@@ -247,6 +274,19 @@
   justify-self: end;
 }
 
+.footer__plain-link,
+.footer__plain-button {
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  display: inline;
+}
+
 /* Móvil */
 @media (max-width: 767px) {
   .footer__container {
@@ -283,6 +323,11 @@
 
   .footer__label {
     font-size: 0.68rem;
+  }
+
+  .footer__input,
+  .footer__textarea {
+    font-size: 0.9rem;
   }
 
   .footer__submit-text {

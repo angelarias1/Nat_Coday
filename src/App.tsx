@@ -6,7 +6,7 @@ import Footer from './assets/Component/Footer';
 import HomePage from './assets/Pages/HomePage';
 import ProyectosPage from './assets/Pages/ProyectosPage';
 import BioPage from './assets/Pages/BioPage';
-import ServiciosPage from './assets/Pages/ServiciosPage';
+import ServiciosPage from './assets/Pages/ServiciosLayout';
 import ContactoPage from './assets/Pages/ContactoPage';
 
 function App() {

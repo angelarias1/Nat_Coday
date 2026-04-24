@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Navbar.css';
 
@@ -16,6 +16,7 @@ type NavbarProps = {
 
 function Navbar({ theme = 'blue' }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleToggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -25,12 +26,34 @@ function Navbar({ theme = 'blue' }: NavbarProps) {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className={`navbar navbar--${theme}`}>
+      <header
+        className={`navbar navbar--${theme} ${
+          isScrolled ? 'navbar--scrolled' : ''
+        }`}
+      >
         <div className="navbar__container">
           <Link to="/" className="navbar__brand" onClick={handleCloseMenu}>
-            NAT CODAY
+            <span className="navbar__brand-text">NAT CODAY</span>
+            <img
+              src={overlayLogo}
+              alt="Nat Coday"
+              className="navbar__brand-image"
+            />
           </Link>
 
           <button

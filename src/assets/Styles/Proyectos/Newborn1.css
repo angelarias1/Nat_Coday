@@ -1,6 +1,6 @@
 .newborn-one {
   width: 100%;
-  background-color: #d8d4cf;
+  background-color: #DED9D3;
   padding: 56px 0 120px;
   overflow: hidden;
 }
@@ -130,7 +130,7 @@
   }
 
   .newborn-one__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 0.95;
     text-align: left;
   }
