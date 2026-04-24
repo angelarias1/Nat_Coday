@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../Styles/Navbar.css';
 
 import menuIcon from '../../../public/img/1/menu.png';
@@ -17,6 +17,10 @@ type NavbarProps = {
 function Navbar({ theme = 'blue' }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  const isLightNavbar =
+    location.pathname === '/' || location.pathname === '/contacto';
 
   const handleToggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -37,14 +41,14 @@ function Navbar({ theme = 'blue' }: NavbarProps) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [location.pathname]);
 
   return (
     <>
       <header
         className={`navbar navbar--${theme} ${
           isScrolled ? 'navbar--scrolled' : ''
-        }`}
+        } ${isLightNavbar ? 'navbar--light' : 'navbar--normal'}`}
       >
         <div className="navbar__container">
           <Link to="/" className="navbar__brand" onClick={handleCloseMenu}>

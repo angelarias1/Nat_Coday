@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../Styles/Home/GallerySection.css';
 
 import galleryImageOne from '../../../../public/img/1/1.4.webp';
@@ -64,16 +65,24 @@ const GallerySection: React.FC = () => {
   }, []);
 
   const visibleItems = useMemo(() => {
-    const rotated = [...galleryItems.slice(currentIndex), ...galleryItems.slice(0, currentIndex)];
+    const rotated = [
+      ...galleryItems.slice(currentIndex),
+      ...galleryItems.slice(0, currentIndex),
+    ];
+
     return rotated.slice(0, visibleCards);
   }, [currentIndex, visibleCards]);
 
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? galleryItems.length - 1 : prev - 1));
+    setCurrentIndex((prev) =>
+      prev === 0 ? galleryItems.length - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === galleryItems.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) =>
+      prev === galleryItems.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
@@ -90,7 +99,8 @@ const GallerySection: React.FC = () => {
 
           <div className="gallery-section__description-block">
             <p className="gallery-section__description">
-              Estos son algunos de los proyectos que he podido realizar a lo largo del tiempo.
+              Estos son algunos de los proyectos que he podido realizar a lo
+              largo del tiempo.
             </p>
           </div>
 
@@ -127,9 +137,12 @@ const GallerySection: React.FC = () => {
 
         <div className="gallery-section__grid">
           {visibleItems.map((item) => (
-            <article className="gallery-card" key={item.id}>
+            <Link to="/proyecto" className="gallery-card" key={item.id}>
               <div className="gallery-card__info">
-                <span className="gallery-card__category">{item.category}</span>
+                <span className="gallery-card__category">
+                  {item.category}
+                </span>
+
                 <h3 className="gallery-card__name">{item.name}</h3>
               </div>
 
@@ -140,7 +153,7 @@ const GallerySection: React.FC = () => {
                   className="gallery-card__image"
                 />
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

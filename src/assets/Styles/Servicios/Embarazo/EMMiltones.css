@@ -1,0 +1,114 @@
+.em-miltones {
+  width: 100%;
+  background-color: #ded9d3;
+  padding: 180px 0 180px;
+  overflow: hidden;
+}
+
+.em-miltones__container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+
+.em-miltones__content {
+  grid-column: 2 / 4;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+  text-align: center;
+  justify-self: center;
+}
+
+.em-miltones__eyebrow,
+.em-miltones__subtitle {
+  display: block;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #5f5a57;
+}
+
+.em-miltones__title {
+  margin: 8px 0 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 0.95;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #5f5956;
+}
+
+.em-miltones__ornament {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.em-miltones__ornament-image {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Móvil */
+@media (max-width: 479px) {
+  .em-miltones {
+    padding: 110px 0 110px;
+  }
+
+  .em-miltones__container {
+    grid-template-columns: 1fr;
+  }
+
+  .em-miltones__content {
+    grid-column: auto;
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .em-miltones__title {
+    font-size: 1.75rem;
+    line-height: 0.98;
+  }
+
+  .em-miltones__ornament-image {
+    width: 60px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .em-miltones {
+    padding: 140px 0 140px;
+  }
+
+  .em-miltones__container {
+    grid-template-columns: 1fr;
+  }
+
+  .em-miltones__content {
+    grid-column: auto;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .em-miltones__title {
+    font-size: 2.4rem;
+  }
+
+  .em-miltones__ornament-image {
+    width: 70px;
+  }
+}

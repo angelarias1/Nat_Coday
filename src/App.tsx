@@ -1,17 +1,25 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './assets/Component/Navbar';
 import Footer from './assets/Component/Footer';
+import ScrollToTop from './assets/Component/ScrollToTop';
 
 import HomePage from './assets/Pages/HomePage';
 import ProyectosPage from './assets/Pages/ProyectosPage';
 import BioPage from './assets/Pages/BioPage';
 import ServiciosPage from './assets/Pages/ServiciosLayout';
 import ContactoPage from './assets/Pages/ContactoPage';
+import ProyectoPage from './assets/Pages/ProyectoPage';
 
 function App() {
+  const location = useLocation();
+
+  const hideFooter = location.pathname === '/contacto';
+
   return (
     <>
+      <ScrollToTop />
+
       <Navbar />
 
       <Routes>
@@ -20,9 +28,10 @@ function App() {
         <Route path="/bio" element={<BioPage />} />
         <Route path="/servicios" element={<ServiciosPage />} />
         <Route path="/contacto" element={<ContactoPage />} />
+        <Route path="/proyecto" element={<ProyectoPage />} />
       </Routes>
 
-      <Footer />
+      {!hideFooter && <Footer />}
     </>
   );
 }

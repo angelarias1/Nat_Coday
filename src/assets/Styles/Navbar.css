@@ -9,7 +9,7 @@
 }
 
 .navbar--scrolled {
-  background-color: #DED9D3;
+  background-color: #ded9d3;
 }
 
 .navbar__container {
@@ -49,6 +49,7 @@
   text-transform: uppercase;
   color: #5f5956;
   display: inline-block;
+  transition: color 0.25s ease;
 }
 
 .navbar__brand-image {
@@ -74,6 +75,26 @@
   width: auto;
   height: 14px;
   object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(8%) saturate(514%)
+    hue-rotate(334deg) brightness(92%) contrast(89%);
+  transition: filter 0.25s ease;
+}
+
+.navbar--light:not(.navbar--scrolled) .navbar__brand-text {
+  color: #f6f0e8;
+}
+
+.navbar--light:not(.navbar--scrolled) .navbar__menu-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar--normal .navbar__brand-text,
+.navbar--scrolled .navbar__brand-text {
+  color: #5f5956;
+}
+
+.navbar--normal .navbar__menu-icon,
+.navbar--scrolled .navbar__menu-icon {
   filter: brightness(0) saturate(100%) invert(31%) sepia(8%) saturate(514%)
     hue-rotate(334deg) brightness(92%) contrast(89%);
 }
@@ -268,15 +289,12 @@
 @media (max-width: 479px) {
   .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: transparent;
-    z-index: 40;
   }
 
   .navbar--scrolled {
-    background-color: #d8d4cf;
+    background-color: #ded9d3;
   }
 
   .navbar__container {
@@ -298,6 +316,16 @@
   .navbar__brand-image {
     display: block;
     height: 44px;
+    transition: filter 0.25s ease;
+  }
+
+  .navbar--light:not(.navbar--scrolled) .navbar__brand-image {
+    filter: brightness(0) invert(1);
+  }
+
+  .navbar--normal .navbar__brand-image,
+  .navbar--scrolled .navbar__brand-image {
+    filter: none;
   }
 
   .navbar__menu-button {
@@ -306,8 +334,6 @@
 
   .navbar__menu-icon {
     height: 14px;
-    filter: brightness(0) saturate(100%) invert(31%) sepia(7%) saturate(509%)
-      hue-rotate(334deg) brightness(94%) contrast(87%);
   }
 
   .navbar-overlay__container {
@@ -417,13 +443,9 @@
   }
 
   .navbar-overlay__ornament {
-    position: absolute;
     right: calc(var(--site-padding-mobile) + var(--site-green-gap-mobile));
     bottom: 10px;
     width: 62px;
-    max-width: none;
-    height: auto;
-    margin-top: 0;
   }
 }
 
@@ -431,15 +453,12 @@
 @media (min-width: 480px) and (max-width: 1023px) {
   .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: transparent;
-    z-index: 40;
   }
 
   .navbar--scrolled {
-    background-color: #d8d4cf;
+    background-color: #ded9d3;
   }
 
   .navbar__container {
@@ -454,19 +473,12 @@
     align-items: center;
   }
 
-  .navbar__brand {
-    font-size: 2.2rem;
-    color: #58504d;
-  }
-
   .navbar__menu-button {
     margin-top: 0;
   }
 
   .navbar__menu-icon {
     height: 15px;
-    filter: brightness(0) saturate(100%) invert(31%) sepia(7%) saturate(509%)
-      hue-rotate(334deg) brightness(94%) contrast(87%);
   }
 
   .navbar-overlay__container {
@@ -565,14 +577,8 @@
   }
 
   .navbar-overlay__ornament {
-    position: absolute;
     right: calc(var(--site-padding-tablet) + var(--site-green-gap-tablet));
     bottom: 10px;
     width: 62px;
-    max-width: none;
-    height: auto;
-    margin-top: 0;
   }
 }
-
-

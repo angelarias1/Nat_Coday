@@ -7,34 +7,11 @@ function EMImagenesS() {
     <section className="em-imagenes-s">
       <div className="em-imagenes-s__container">
         <div className="em-imagenes-s__layout">
-          <div className="em-imagenes-s__heading">
-            <h2 className="em-imagenes-s__title">
-              CAPTURANDO LA
-              <br />
-              ESENCIA PURA
-            </h2>
-          </div>
-
-          <div className="em-imagenes-s__top">
-            <div className="em-imagenes-s__description">
-              <p>
-                El momento ideal para realizar esta sesión a tu bebé es entre la
-                primer y segunda semana de nacido (entre el día 7 al 13 ideal)
-                esto debido a que aún es muy flexible, duerme más y es más
-                sencilla su manipulación sin alterar su sueño.
-              </p>
-            </div>
-
-            <button type="button" className="em-imagenes-s__button">
-              Ver Proyecto
-            </button>
-          </div>
-
           <div className="em-imagenes-s__gallery">
             <div className="em-imagenes-s__image-block em-imagenes-s__image-block--left">
               <img
                 src={imageLeft}
-                alt="Recién nacido envuelto descansando junto a un pequeño muñeco"
+                alt="Imagen vertical de sesión"
                 className="em-imagenes-s__image"
               />
             </div>
@@ -42,7 +19,7 @@ function EMImagenesS() {
             <div className="em-imagenes-s__image-block em-imagenes-s__image-block--right">
               <img
                 src={imageRight}
-                alt="Recién nacido descansando de lado sobre fondo claro"
+                alt="Imagen horizontal de sesión"
                 className="em-imagenes-s__image"
               />
             </div>

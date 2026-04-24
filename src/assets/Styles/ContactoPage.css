@@ -1,0 +1,21 @@
+.contacto-page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 86px;
+  background-color: #58504d;
+}
+
+.contacto-page .footer {
+  min-height: calc(100vh - 86px);
+  display: flex;
+}
+
+.contacto-page .footer__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-page .footer__top {
+  flex: 1;
+}

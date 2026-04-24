@@ -32,7 +32,7 @@ body,
 /* Base general */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: blue;
+  background: #ded9d3; /* 👈 fondo correcto */
   color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,7 +53,6 @@ body {
   top: 0;
   bottom: 0;
   width: 6px;
-  background: red;
   pointer-events: none;
   z-index: 30;
 }
@@ -70,7 +69,6 @@ body {
   width: calc(100% - (var(--site-padding-desktop) * 2));
   margin: 0 auto;
   min-height: 100vh;
-  background: limegreen;
   box-sizing: border-box;
 }
 
@@ -78,7 +76,7 @@ body {
   width: calc(100% - (var(--site-green-gap-desktop) * 2));
   margin: 0 auto;
   min-height: 100vh;
-  background: #d8d4cf;
+  background: #ded9d3;
 }
 
 /* Elementos comunes */

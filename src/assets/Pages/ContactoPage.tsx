@@ -1,5 +1,12 @@
+import Footer from '../Component/Footer';
+import '../Styles/ContactoPage.css';
+
 function ContactoPage() {
-  return <div>ContactoPage</div>;
+  return (
+    <main className="contacto-page">
+      <Footer />
+    </main>
+  );
 }
 
 export default ContactoPage;
