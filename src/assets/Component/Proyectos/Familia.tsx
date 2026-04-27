@@ -1,5 +1,7 @@
 import '../../Styles/Proyectos/Familia.css';
 import familiaImage from '../../../../public/img/2/2.4.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Familia() {
   return (
@@ -17,9 +19,13 @@ function Familia() {
               MARTÍNEZ
             </h2>
 
-            <button type="button" className="familia-one__button">
-              Ver proyecto
-            </button>
+              <button type="button" className="familia-one__button">
+  <span className="familia-one__button-text">Ver proyecto</span>
+
+  <span className="familia-one__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+</button>
           </div>
 
           <div className="familia-one__image-block">

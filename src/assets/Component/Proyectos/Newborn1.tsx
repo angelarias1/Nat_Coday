@@ -1,6 +1,6 @@
 import '../../Styles/Proyectos/Newborn1.css';
 import newbornImage from '../../../../public/img/2/2.1.webp';
-
+import flechaIcon from '../../../../public/img/flecha (2).png';
 function Newborn1() {
   return (
     <section className="newborn-one">
@@ -32,8 +32,12 @@ function Newborn1() {
             </h3>
 
             <button type="button" className="newborn-one__button">
-              Ver proyecto
-            </button>
+  <span className="newborn-one__button-text">Ver proyecto</span>
+
+  <span className="newborn-one__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+</button>
           </div>
         </div>
       </div>

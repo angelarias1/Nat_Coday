@@ -65,6 +65,8 @@ function TestimonialsSection() {
             alt=""
             aria-hidden="true"
             className="testimonials-section__ornament"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -75,6 +77,8 @@ function TestimonialsSection() {
                 src={testimonialImages[leftIndex].image}
                 alt={testimonialImages[leftIndex].alt}
                 className="testimonials-section__image testimonials-section__image--side"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -83,6 +87,8 @@ function TestimonialsSection() {
                 src={testimonialImages[centerIndex].image}
                 alt={testimonialImages[centerIndex].alt}
                 className="testimonials-section__image testimonials-section__image--center"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -91,6 +97,8 @@ function TestimonialsSection() {
                 src={testimonialImages[rightIndex].image}
                 alt={testimonialImages[rightIndex].alt}
                 className="testimonials-section__image testimonials-section__image--side"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

@@ -68,17 +68,58 @@
   border: 1px solid #7f7771;
   border-radius: 999px;
   background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   color: #5f5956;
   cursor: pointer;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  transition:
+    min-width 0.3s ease,
+    padding 0.3s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .cliente-one__button:hover {
+  min-width: 174px;
+  padding-right: 14px;
   background-color: rgba(0, 0, 0, 0.04);
   transform: translateY(-1px);
+}
+
+.cliente-one__button-text {
+  white-space: nowrap;
+}
+
+.cliente-one__button-icon {
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition:
+    width 0.3s ease,
+    opacity 0.25s ease,
+    margin-left 0.3s ease;
+}
+
+.cliente-one__button-icon img {
+  width: 26px;
+  height: auto;
+  display: block;
+}
+
+.cliente-one__button:hover .cliente-one__button-icon {
+  width: 30px;
+  opacity: 1;
+  margin-left: 12px;
 }
 
 /* Móvil */

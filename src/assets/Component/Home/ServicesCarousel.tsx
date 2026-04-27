@@ -6,7 +6,7 @@ import serviceImage2 from '../../../../public/img/1/1.13.webp';
 import serviceImage3 from '../../../../public/img/1/1.14.webp';
 import serviceImage4 from '../../../../public/img/1/1.15.webp';
 import serviceImage5 from '../../../../public/img/1/1.15.webp';
-
+import flechaIcon from '../../../../public/img/flecha (2).png';
 import arrowPrev from '../../../../public/img/1/Vector 9.png';
 import arrowNext from '../../../../public/img/1/vector 10.png';
 
@@ -53,7 +53,7 @@ const services: ServiceItem[] = [
       'Fotografías delicadas y atemporales para preservar los primeros días de vida con una composición suave, íntima y llena de ternura.',
     image: serviceImage5,
   },
-    {
+  {
     id: 6,
     title: 'COMERCIAL',
     description:
@@ -85,6 +85,8 @@ function ServicesCarousel() {
               src={currentService.image}
               alt={currentService.title}
               className="services-carousel__image"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -115,6 +117,8 @@ function ServicesCarousel() {
                     alt=""
                     aria-hidden="true"
                     className="services-carousel__arrow-image"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </button>
 
@@ -129,13 +133,21 @@ function ServicesCarousel() {
                     alt=""
                     aria-hidden="true"
                     className="services-carousel__arrow-image"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </button>
               </div>
 
-              <button type="button" className="services-carousel__button">
-                Ver proyectos
-              </button>
+             <button type="button" className="services-carousel__button">
+  <span className="services-carousel__button-text">
+    Ver proyectos
+  </span>
+
+  <span className="services-carousel__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+</button>
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import '../../Styles/Proyectos/Cliente2.css';
 import clienteImage from '../../../../public/img/2/2.6.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Cliente2() {
   return (
@@ -15,9 +17,13 @@ function Cliente2() {
               del proyecto
             </h2>
 
-            <button type="button" className="cliente-two__button">
-              Ver proyecto
-            </button>
+             <button type="button" className="cliente-two__button">
+  <span className="cliente-two__button-text">Ver proyecto</span>
+
+  <span className="cliente-two__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+</button>
           </div>
 
           <div className="cliente-two__image-block">

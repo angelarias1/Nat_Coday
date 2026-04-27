@@ -116,6 +116,8 @@ const GallerySection: React.FC = () => {
                 alt=""
                 aria-hidden="true"
                 className="gallery-section__arrow-image"
+                loading="lazy"
+                decoding="async"
               />
             </button>
 
@@ -130,6 +132,8 @@ const GallerySection: React.FC = () => {
                 alt=""
                 aria-hidden="true"
                 className="gallery-section__arrow-image"
+                loading="lazy"
+                decoding="async"
               />
             </button>
           </div>
@@ -151,6 +155,8 @@ const GallerySection: React.FC = () => {
                   src={item.image}
                   alt={item.alt}
                   className="gallery-card__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </Link>

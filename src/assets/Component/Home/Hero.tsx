@@ -11,6 +11,9 @@ const Hero: React.FC = () => {
           src={heroImage}
           alt="Hero principal"
           className="hero__image"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
 
@@ -29,8 +32,8 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="hero__description">
-            Cada clic de mi cámara es un abrazo al pasado, una chispa de
-            amor propio que captura tu historia única.
+            Cada clic de mi cámara es un abrazo al pasado, una chispa de amor
+            propio que captura tu historia única.
           </p>
 
           <button type="button" className="hero__button">

@@ -1,5 +1,7 @@
 import '../../Styles/Bio_Nosotros/Bio.css';
 import bioImage from '../../../../public/img/3/3.1.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Bio() {
   return (
@@ -24,10 +26,11 @@ function Bio() {
               </p>
 
               <button type="button" className="bio-section__button">
-                Cuéntame de tu proyecto
-                <span className="bio-section__button-arrow" aria-hidden="true">
-                  →
-                </span>
+  <span className="bio-section__button-text">Cuéntame de tu proyecto</span>
+
+  <span className="bio-section__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
               </button>
             </div>
 

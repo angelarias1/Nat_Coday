@@ -1,5 +1,7 @@
 import '../../Styles/Proyectos/Newborn2.css';
 import newbornImage from '../../../../public/img/2/2.2.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Newborn2() {
   return (
@@ -15,9 +17,13 @@ function Newborn2() {
               PARA CAMILA
             </h2>
 
-            <button type="button" className="newborn-two__button">
-              Ver proyecto
-            </button>
+          <button type="button" className="newborn-two__button">
+  <span className="newborn-two__button-text">Ver proyecto</span>
+
+  <span className="newborn-two__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+</button>
           </div>
 
           <div className="newborn-two__image-block">

@@ -11,6 +11,8 @@ const LargeImageSection: React.FC = () => {
           src={largeImage}
           alt="Imagen decorativa"
           className="large-image-section__image"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </section>

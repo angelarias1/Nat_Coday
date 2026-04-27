@@ -1,5 +1,7 @@
 import '../../Styles/Proyectos/Maternidad.css';
 import maternidadImage from '../../../../public/img/2/2.3.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Maternidad() {
   return (
@@ -25,9 +27,13 @@ function Maternidad() {
               NATALIA
             </h2>
 
-            <button type="button" className="maternidad-one__button">
-              Ver proyecto
-            </button>
+         <button type="button" className="maternidad-one__button">
+  <span className="maternidad-one__button-text">Ver proyecto</span>
+
+  <span className="maternidad-one__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+</button>
           </div>
         </div>
       </div>
