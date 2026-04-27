@@ -1,6 +1,8 @@
 import '../../Styles/Bio_Nosotros/Objetivo.css';
 import objetivoSmall from '../../../../public/img/3/3.5.webp';
 import objetivoLarge from '../../../../public/img/3/3.6.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Objetivo() {
   return (
@@ -26,8 +28,12 @@ function Objetivo() {
                 permanezcan en cada familia, a lo largo de las generaciones.
               </p>
 
-              <button type="button" className="objetivo-section__button">
-                Hagamos tu sesión
+               <button type="button" className="objetivo-section__button">
+  <span className="objetivo-section__button-text">Hagamos tu sesión</span>
+
+  <span className="objetivo-section__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
               </button>
             </div>
 

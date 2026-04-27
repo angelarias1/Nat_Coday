@@ -1,5 +1,7 @@
 import '../../Styles/Bio_Nosotros/Trayectoria.css';
 import trayectoriaImage from '../../../../public/img/3/3.2.webp';
+import flechaIcon from '../../../../public/img/flecha (2).png';
+
 
 function Trayectoria() {
   return (
@@ -42,15 +44,13 @@ function Trayectoria() {
               familias y retratos personales.
             </p>
 
-            <button type="button" className="trayectoria-section__button">
-              Ver proyectos
-              <span
-                className="trayectoria-section__button-arrow"
-                aria-hidden="true"
-              >
-                →
-              </span>
-            </button>
+               <button type="button" className="trayectoria-section__button">
+  <span className="trayectoria-section__button-text">Ver Proyecto</span>
+
+  <span className="trayectoria-section__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
         </div>
       </div>
