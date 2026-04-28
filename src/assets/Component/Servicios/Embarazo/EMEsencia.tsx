@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Embarazo/EMEsencia.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function EMEsencia() {
   return (
@@ -24,8 +26,12 @@ function EMEsencia() {
                 </p>
               </div>
 
-              <button type="button" className="em-esencia__button">
-                Agenda tu sesión
+               <button type="button" className="nb-esencia__button">
+  <span className="nb-esencia__button-text">Hagamos tu sesión</span>
+
+  <span className="nb-esencia__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
               </button>
             </div>
           </div>

@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Retrato/REEsencia.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function REEsencia() {
   return (
@@ -19,9 +21,13 @@ function REEsencia() {
                 Cada retrato que creamos es una narrativa visual que revela quién eres realmente. A través de nuestra técnica y enfoque personalizado, capturamos momentos genuinos y emociones auténticas que cuentan tu historia en cada imagen.              </p>
             </div>
 
-            <button type="button" className="re-esencia__button">
-              Agenda tu sesión
-            </button>
+              <button type="button" className="re-esencia__button">
+  <span className="re-esencia__button-text">Hagamos tu sesión</span>
+
+  <span className="re-esencia__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
         </div>
       </div>

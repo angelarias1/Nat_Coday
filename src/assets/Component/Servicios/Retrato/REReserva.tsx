@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Retrato/REReserva.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function REReserva() {
   return (
@@ -19,9 +21,13 @@ function REReserva() {
               Nuestras imágenes de retrato no solo son fotografías, sino también ventanas a tus momentos y emociones. Cada imagen captura un instante que perdurará en el tiempo, permitiéndote revivir y compartir tus recuerdos una y otra vez.    </p>
             </div>
 
-            <button type="button" className="re-reserva__button">
-              Agenda tu sesión
-            </button>
+                          <button type="button" className="re-reserva__button">
+  <span className="re-reserva__button-text">Hagamos tu sesión</span>
+
+  <span className="re-reserva__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
         </div>
       </div>

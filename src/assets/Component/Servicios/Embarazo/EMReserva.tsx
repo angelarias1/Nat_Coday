@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Embarazo/EMReserva.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function EMReserva() {
   return (
@@ -21,8 +23,12 @@ function EMReserva() {
                 </p>
               </div>
 
-              <button type="button" className="em-reserva__button">
-                Agenda tu sesión
+                <button type="button" className="em-reserva__button">
+  <span className="em-reserva__button-text">Hagamos tu sesión</span>
+
+  <span className="em-reserva__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
               </button>
             </div>
           </div>

@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Sitter/SIReserva.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function SIReserva() {
   return (
@@ -19,9 +21,13 @@ function SIReserva() {
               Si tu bebé está en la etapa Sitter o está a punto de estarlo, nuestras sesiones son una forma perfecta de documentar esta emocionante fase. Contáctanos para programar tu sesión y crear recuerdos invaluables que durarán toda la vida.      </p>
             </div>
 
-            <button type="button" className="si-reserva__button">
-              Agenda tu sesión
-            </button>
+                               <button type="button" className="re-reserva__button">
+  <span className="re-reserva__button-text">Hagamos tu sesión</span>
+
+  <span className="re-reserva__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
         </div>
       </div>

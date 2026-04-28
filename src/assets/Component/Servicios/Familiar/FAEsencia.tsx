@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Familiar/FAEsencia.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function FAEsencia() {
   return (
@@ -19,9 +21,13 @@ function FAEsencia() {
                 Cada familia tiene una historia única que contar. Nuestras sesiones de fotografía familiar te brindan la oportunidad de celebrar y capturar esos momentos compartidos llenos de risas, abrazos y vínculos especiales.              </p>
             </div>
 
-            <button type="button" className="fa-esencia__button">
-              Agenda tu sesión
-            </button>
+             <button type="button" className="fa-esencia__button">
+  <span className="fa-esencia__button-text">Hagamos tu sesión</span>
+
+  <span className="fa-esencia__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
         </div>
       </div>

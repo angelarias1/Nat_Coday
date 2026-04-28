@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Newborn/NBReserva.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function NBReserva() {
   return (
@@ -21,9 +23,13 @@ function NBReserva() {
 Captura la dulzura de los primeros días para siempre. Contáctanos para programar tu sesión y crear recuerdos que durarán toda la vida.      </p>
             </div>
 
-            <button type="button" className="nb-reserva__button">
-              Ver Proyecto
-            </button>
+               <button type="button" className="nb-reserva__button">
+  <span className="nb-reserva__button-text">Hagamos tu sesión</span>
+
+  <span className="nb-reserva__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
         </div>
       </div>

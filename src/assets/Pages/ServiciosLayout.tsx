@@ -16,8 +16,16 @@ type ServiceId =
   | 'retrato';
 
 function ServiciosLayout() {
-  const [activeService, setActiveService] = useState<ServiceId>('embarazo');
+  const [activeService, setActiveService] = useState<ServiceId>('newborn');
   const [menuStopped, setMenuStopped] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
+  }, [activeService]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +70,7 @@ function ServiciosLayout() {
       case 'embarazo':
         return <EmbarazoPage />;
       case 'newborn':
-        return <NewbornPage />
+        return <NewbornPage />;
       case 'sitter':
         return <SitterPage />;
       case 'familiar':
@@ -90,9 +98,7 @@ function ServiciosLayout() {
       <div className="page-width-shell">
         <div className="page-width-shell__inner">
           <div className="page-width-shell__content">
-            <div className="servicios-page__view">
-              {renderActiveView()}
-            </div>
+            <div className="servicios-page__view">{renderActiveView()}</div>
           </div>
         </div>
       </div>
