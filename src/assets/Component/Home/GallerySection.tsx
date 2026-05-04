@@ -113,6 +113,8 @@ const GallerySection: React.FC = () => {
             >
               <img
                 src={arrowPrev}
+
+                
                 alt=""
                 aria-hidden="true"
                 className="gallery-section__arrow-image"

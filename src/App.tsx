@@ -10,6 +10,8 @@ import BioPage from './assets/Pages/BioPage';
 import ServiciosPage from './assets/Pages/ServiciosLayout';
 import ContactoPage from './assets/Pages/ContactoPage';
 import ProyectoPage from './assets/Pages/ProyectoPage';
+import ImageReveal from './assets/Component/ImageReveal';
+
 
 function App() {
   const location = useLocation();
@@ -19,6 +21,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
+      <ImageReveal />
 
       <Navbar />
 

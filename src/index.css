@@ -78,7 +78,28 @@ body {
   min-height: 100vh;
   background: #ded9d3;
 }
+img.image-reveal {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    scale 0.35s ease;
+}
 
+img.image-reveal.image-reveal--visible:hover {
+  scale: 1.03;
+}
+
+.expert-section__button-icon img,
+.services-carousel__button-icon img,
+.newborn-one__button-icon img {
+  opacity: 1;
+  transform: none;
+}
+
+img.image-reveal.image-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Elementos comunes */
 img,
 picture,

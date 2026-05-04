@@ -91,6 +91,25 @@
 }
 
 .services-carousel__arrow {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.services-carousel__arrow:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+
+.services-carousel__arrow--prev:hover {
+  transform: translateX(-3px);
+}
+
+.services-carousel__arrow--next:hover {
+  transform: translateX(3px);
+}
+
+.services-carousel__arrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;

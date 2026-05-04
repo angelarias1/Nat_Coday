@@ -69,13 +69,21 @@
 }
 
 .gallery-section__arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.gallery-section__arrow:hover {
+  opacity: 0.75;
+}
+
+.gallery-section__arrow--prev:hover {
+  transform: translateX(-6px);
+}
+
+.gallery-section__arrow--next:hover {
+  transform: translateX(6px);
 }
 
 .gallery-section__arrow-image {

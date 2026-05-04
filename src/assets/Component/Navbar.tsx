@@ -116,9 +116,9 @@ function Navbar({ theme = 'blue' }: NavbarProps) {
 
             <div className="navbar-overlay__info">
               <p>
-                Colima 392, 26a. Piso Colonia Roma,
+                Colima 392, 26a. Piso Colonia Roma, 
                 <br />
-                Delegación Cuauhtémoc C.P. 06700,
+                Delegación Cuauhtémoc C..P. 06700,
                 <br />
                 Ciudad de México.
               </p>

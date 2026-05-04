@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 40;
@@ -9,7 +9,8 @@
 }
 
 .navbar--scrolled {
-  background-color: #ded9d3;
+  background-color: rgba(222, 217, 211, 0.92);
+  backdrop-filter: blur(12px);
 }
 
 .navbar__container {
@@ -22,7 +23,7 @@
     var(--site-padding-desktop) +
     var(--site-green-gap-desktop)
   );
-  padding-bottom: 0;
+  padding-bottom: 8px;
   padding-left: calc(
     ((100vw - min(100vw, var(--site-max-width))) / 2) +
     var(--site-padding-desktop) +
@@ -30,7 +31,7 @@
   );
   box-sizing: border-box;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -188,8 +189,11 @@
 .navbar-overlay__close-icon {
   display: block;
   width: auto;
-  height: 24px;
+  height: 30px;
   object-fit: contain;
+      filter: brightness(0) invert(1);
+
+  
 }
 
 .navbar-overlay__center {
@@ -510,6 +514,7 @@
     margin-top: 0;
     justify-self: end;
     align-self: start;
+    
   }
 
   .navbar-overlay__close-icon {
@@ -560,6 +565,8 @@
   }
 
   .navbar-overlay__bottom {
+
+    
     margin-top: auto;
     flex-direction: column;
     align-items: flex-start;
