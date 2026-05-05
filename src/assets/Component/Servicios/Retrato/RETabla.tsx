@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Retrato/RETabla.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function RETabla() {
   return (
@@ -51,8 +53,12 @@ function RETabla() {
             </h3>
 
             <button type="button" className="re-tabla__button">
-              Ve nuestro portfolio
-            </button>
+  <span className="re-tabla__button-text">Portfolio de retrato</span>
+
+  <span className="re-tabla__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
 
           <div className="re-tabla__content">

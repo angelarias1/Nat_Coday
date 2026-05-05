@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Newborn/NBTabla.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function NBTabla() {
   return (
@@ -57,9 +59,13 @@ function NBTabla() {
               TODA LA VIDA
             </h3>
 
-            <button type="button" className="nb-tabla__button">
-              Portfolio newborn
-            </button>
+               <button type="button" className="nb-tabla__button">
+  <span className="nb-tabla__button-text">Portfolio de Newborn</span>
+
+  <span className="nb-tabla__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
 
           <div className="nb-tabla__content">

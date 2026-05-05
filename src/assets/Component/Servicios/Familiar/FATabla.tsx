@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Familiar/FATabla.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function FATabla() {
   return (
@@ -50,9 +52,13 @@ function FATabla() {
               CREATIVIDAD
             </h3>
 
-            <button type="button" className="fa-tabla__button">
-              Portfolio de sitters
-            </button>
+          <button type="button" className="fa-tabla__button">
+  <span className="fa-tabla__button-text">Portfolio de Familia</span>
+
+  <span className="fa-tabla__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
 
           <div className="fa-tabla__content">

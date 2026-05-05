@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Sitter/SITabla.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function SITabla() {
   return (
@@ -52,9 +54,13 @@ function SITabla() {
               CAMBIO
             </h3>
 
-            <button type="button" className="si-tabla__button">
-              Portfolio de sitters
-            </button>
+           <button type="button" className="si-tabla__button">
+  <span className="si-tabla__button-text">Portfolio de sitters</span>
+
+  <span className="si-tabla__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
           </div>
 
           <div className="si-tabla__content">

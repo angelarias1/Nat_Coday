@@ -1,4 +1,6 @@
 import '../../../Styles/Servicios/Embarazo/EMTabla.css';
+import flechaIcon from '../../../../../public/img/flecha (2).png';
+
 
 function EMTabla() {
   return (
@@ -49,16 +51,21 @@ function EMTabla() {
         </div>
 
         <div className="em-tabla__row">
-          <div className="em-tabla__heading">
+          <div className="em-tabla__heading"> 
             <h3 className="em-tabla__title">
               CONEXIÓN Y
               <br />
               EMOCIÓN
             </h3>
 
-            <button type="button" className="em-tabla__button">
-              Portfolio de maternidad
-            </button>
+              <button type="button" className="em-tabla__button">
+  <span className="em-tabla__button-text">Portfolio de Maternidad</span>
+
+  <span className="em-tabla__button-icon">
+    <img src={flechaIcon} alt="" aria-hidden="true" />
+  </span>
+              </button>
+            
           </div>
 
           <div className="em-tabla__content">
